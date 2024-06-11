@@ -1,13 +1,23 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/sections/Header.astro";
+import Navigation from "@/sections/Navigation.astro";
+import Main from "@/sections/Main.astro";
+import Info from "@/sections/Info.astro";
+import Footer from "@/sections/Footer.astro";
 ---
 
 <Layout title="Hola">
+  <Header />
+  <Navigation />
   <main>
-	<h1 class="text-pink-200 animate-spin-clockwise">Hola, holita</h1>
-    <p class="text-pink-200 animate-jump">
+    <h1 class="text-pink-200">Hola, holita</h1>
+    <p class="text-pink-200 animate-tada">
       GB Lorchos é o primeiro e único equipo de fútbol gaélico na comarca do
       Barbanza
     </p>
+    <Main />
+    <Info />
   </main>
+  <Footer />
 </Layout>
