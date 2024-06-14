@@ -1,8 +1,12 @@
+---
+import Button from "../components/Button.astro";
+---
+
 <nav>
-    <ul class="flex flex-row justify-center space-x-48" id="navList">
-        <li><a href="">Quen somos?</a></li>
-        <li><a href="">Xogadores</a></li>
-        <li><a href="">Tenda</a></li>
-        <li><a href="">Fútbol gaélico en Galiza</a></li>
-    </ul>
+  <ul class="flex flex-row justify-center space-x-48" id="navList">
+    <li><a href="/quenSomos"><Button buttonName="Quen somos?" /></a></li>
+    <li><a href=""><Button buttonName="Xogadores" /></a></li>
+    <li><a href=""><Button buttonName="Tenda" /></a></li>
+    <li><a href="https://gaelicogalego.gal/"><Button buttonName="Fútbol gaélico no país" /></a></li>
+  </ul>
 </nav>
