@@ -1,18 +1,11 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Header from "@/sections/Header.astro";
-import Navigation from "@/sections/Navigation.astro";
-import Main from "@/sections/Main.astro";
-import Info from "@/sections/Info.astro";
-import Footer from "@/sections/Footer.astro";
+import { Image } from "astro:assets";
+import escudo from "@/images/escudoOptimizado.png";
 ---
 
 <Layout title="Hola">
-  <Header />
-  <Navigation />
-  <main>
-    <Main />
-    <Info />
+  <main>Hola Lorcho
+    <Image src={escudo} alt="Escudo GB Lorchos" class="animate-zoom-in" loading="eager" />
   </main>
-  <Footer />
 </Layout>

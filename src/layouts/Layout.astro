@@ -5,6 +5,11 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import Header from "@/components/Header.astro";
+import Navigation from "@/components/Navigation.astro";
+import Footer from "@/components/Footer.astro";
+
 ---
 
 <!doctype html>
@@ -17,12 +22,16 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header/>
+		<Navigation/>
 		<slot />
+		<Footer/>
 	</body>
 </html>
 <style is:global>
 	html {
 		background: #94b0f8;
 		font-family: "Poppins", sans-serif;
+		/* color-scheme: dark light; */
 	}
 </style>

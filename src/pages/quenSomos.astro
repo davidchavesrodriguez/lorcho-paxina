@@ -1,13 +1,24 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Header from "@/sections/Header.astro";
-import Navigation from "@/sections/Navigation.astro";
-import Footer from "@/sections/Footer.astro";
+import { Image } from "astro:assets";
+import bandeira from "@/images/lorchoBandeira.jpg";
 ---
 
 <Layout title="Somos Lorchos!">
-    <Header />
-    <Navigation />
-    <p>Somos Lorchos!</p>
-    <Footer/>
+  <section class="bg-gray-300 flex flex-row items-center space-x-10">
+    <h1 class="underline font-bold">Fútbol gaélico no Barbanza</h1>
+    <p>
+      O Galicia Bealo Lorchos é o primeiro e único equipo de fútbol gaélico na
+      comarca do Barbanza.
+    </p>
+    <Image src={bandeira} alt="Bandeira Lorcheira" class="max-w-md"/>
+  </section>
+  <section class="bg-background flex flex-row-reverse items-center space-x-10">
+    <h1 class="underline font-bold">Fútbol gaélico no Barbanza</h1>
+    <p>
+      O Galicia Bealo Lorchos é o primeiro e único equipo de fútbol gaélico na
+      comarca do Barbanza.
+    </p>
+    <Image src={bandeira} alt="Bandeira Lorcheira" class="max-w-md"/>
+  </section>
 </Layout>
