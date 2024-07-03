@@ -1,11 +1,9 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { Image } from "astro:assets";
-import escudo from "@/images/escudoOptimizado.png";
 ---
 
 <Layout title="Hola">
   <main>Hola Lorcho
-    <Image src={escudo} alt="Escudo GB Lorchos" class="animate-zoom-in" loading="eager" />
+    <img src="../images/escudoOptimizado.png" alt="Escudo GB Lorchos" class="animate-zoom-in" loading="eager" />
   </main>
 </Layout>

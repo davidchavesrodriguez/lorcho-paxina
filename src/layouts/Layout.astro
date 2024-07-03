@@ -1,7 +1,7 @@
 ---
-import '@fontsource/poppins';
+import "@fontsource/poppins";
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -9,29 +9,30 @@ const { title } = Astro.props;
 import Header from "@/components/Header.astro";
 import Navigation from "@/components/Navigation.astro";
 import Footer from "@/components/Footer.astro";
-
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
 <html lang="gl-ES">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="TODO" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Header/>
-		<Navigation/>
-		<slot />
-		<Footer/>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="TODO" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <Header />
+    <Navigation />
+    <slot />
+    <Footer />
+    <style is:global>
+      html {
+        background: #94b0f8;
+        font-family: "Poppins", sans-serif;
+        /* color-scheme: dark light; */
+      }
+    </style>
+  </body>
 </html>
-<style is:global>
-	html {
-		background: #94b0f8;
-		font-family: "Poppins", sans-serif;
-		/* color-scheme: dark light; */
-	}
-</style>

@@ -16,6 +16,7 @@
     "@midudev/tailwind-animations": "^0.0.7",
     "astro": "^4.10.1",
     "npm": "^10.8.1",
+    "swiper": "^11.1.4",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.4.5"
   }

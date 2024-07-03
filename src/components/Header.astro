@@ -1,10 +1,8 @@
 ---
-import { Image } from "astro:assets";
-import escudo from "@/images/escudoOptimizado.png";
 ---
 
-<header class="bg-secondary">
-  <Image src={escudo} alt="Escudo GB Lorchos" class="w-1/12 animate-zoom-in" loading="eager" />
+<header class="bg-secondary" transition:animate="none">
+  <img src="../images/escudoOptimizado.png" alt="Escudo GB Lorchos" class="w-1/12 animate-zoom-in" loading="eager" />
   <h1>Forsa, Rabia, Lorchos!</h1>
   <h5>Fogar do Galicia Bealo Lorchos</h5>
 </header>
