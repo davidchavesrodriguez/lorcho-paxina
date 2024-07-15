@@ -1,6 +1,5 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-
 ---
 
 <Layout title="Somos Lorchos!">
@@ -11,35 +10,24 @@ import Layout from "@/layouts/Layout.astro";
       O Galicia Bealo Lorchos é o primeiro e único equipo de fútbol gaélico na
       comarca do Barbanza.
     </p>
-<!-- Slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
-    ...
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
-</div>
   </section>
 
   <!-- Second Section -->
   <section class="bg-background flex flex-row items-center">
-    <img src="../images/inicioLorchos.jpeg" alt="Bandeira Lorcheira" class="max-w-md p-7" />
-    <p>As andaduras comezaron en agosto de 2023. Éramos poucos e non coñeciamos case nada do deporte</p>
+    <img
+      src="../images/inicioLorchos.jpeg"
+      alt="Bandeira Lorcheira"
+      class="max-w-md p-7"
+    />
+    <img
+      src="../icons/frechaDereita.svg"
+      alt="Flecha hacia a dereita"
+      class="frechaDereita w-12 hover:scale-125 bg-white hover:bg-blue-200 rounded-full transition-transform -ml-12"
+    />
+    <p>
+      As andaduras comezaron en agosto de 2023. Éramos poucos e non coñeciamos
+      case nada do deporte
+    </p>
     <h1 class="underline font-bold">Somos lorchos!</h1>
-
   </section>
 </Layout>
-
-<script src="../scripts/slider.js"></script>
