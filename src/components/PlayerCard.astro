@@ -1,0 +1,31 @@
+---
+const { dorsal, nome, alcume, foto, rol } = Astro.props;
+const isCoach = rol === "entrenador";
+---
+
+<div
+  class={`bg-white border border-gray-200 rounded-lg shadow-md p-4 ${isCoach ? "border-blue-500 bg-blue-100" : ""}`}
+>
+  <div class="flex items-center justify-center mb-4">
+    <img
+      src={foto || "./icons/unknown.svg"}
+      alt={`Foto de ${nome}`}
+      class="w-24 h-24 object-cover rounded-full"
+    />
+  </div>
+  <h2
+    class={`text-xl font-semibold mb-1 ${isCoach ? "text-blue-700" : "text-black"}`}
+  >
+    {nome}
+  </h2>
+  {
+    isCoach ? (
+      <p class="text-gray-900 font-bold mt-2">Adestrador</p>
+    ) : (
+      <>
+        <p class="text-gray-700 mb-1">Dorsal: {dorsal}</p>
+        {alcume && <p class="text-gray-500">Alcume: {alcume}</p>}
+      </>
+    )
+  }
+</div>

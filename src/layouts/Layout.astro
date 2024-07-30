@@ -24,8 +24,9 @@ import { ViewTransitions } from "astro:transitions";
   </head>
   <body>
     <Header />
-    <Navigation />
-    <slot />
+    <div class="w-3/4 mx-auto">
+      <slot />
+    </div>
     <Footer />
     <style is:global>
       html {
@@ -36,3 +37,8 @@ import { ViewTransitions } from "astro:transitions";
     </style>
   </body>
 </html>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

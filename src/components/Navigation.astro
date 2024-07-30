@@ -3,10 +3,22 @@ import Button from "./Button.astro";
 ---
 
 <nav transition:animate="none">
-  <ul class="flex flex-row justify-center space-x-48" id="navList">
-    <li><a href="/quenSomos"><Button buttonName="Quen somos?" /></a></li>
-    <li><a href="/xogadores"><Button buttonName="Xogadores" /></a></li>
-    <li><a href="/tenda"><Button buttonName="Tenda" /></a></li>
-    <li><a href="https://gaelicogalego.gal/"><Button buttonName="Fútbol gaélico no país" /></a></li>
+  <ul class="flex flex-row" id="navList">
+    <li>
+      <a href="#quenSomos"
+        ><Button icon="./icons/question.svg" altText="Quen somos?" />
+      </a>
+      <li>
+        <a href="#xogadores"
+          ><Button icon="./icons/people.svg" altText="Xogadores" /></a
+        >
+      </li>
+      <li><a href=""><Button buttonName="Tenda" /></a></li>
+      <li>
+        <a href="https://gaelicogalego.gal/"
+          ><Button buttonName="Fútbol gaélico no país" /></a
+        >
+      </li>
+    </li>
   </ul>
 </nav>

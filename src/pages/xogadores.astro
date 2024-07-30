@@ -1,68 +1,162 @@
 ---
-function randomNum() {
-  let randomNum = Math.floor(Math.random() * 1025) + 1;
-  return randomNum;
-}
-
-// Función para obtener datos del Pokémon
-async function getPokemonData() {
-  const response = await fetch(
-    `https://pokeapi.co/api/v2/pokemon/${randomNum()}`
-  );
-  if (!response.ok) {
-    throw new Error("Network response was not ok");
-  }
-  const data = await response.json();
-  return data;
-}
-
-let pokemonData;
-try {
-  pokemonData = await getPokemonData();
-  console.log(pokemonData);
-} catch (error) {
-  console.error("Error fetching Pokemon data:", error);
-  pokemonData = { name: "Error fetching data" };
-}
-import Layout from "../layouts/Layout.astro";
+import PlayerCard from "../components/PlayerCard.astro";
+const players = [
+  {
+    dorsal: "",
+    nome: "Pablo Miragaya López",
+    alcume: "",
+    foto: "",
+    rol: "entrenador",
+  },
+  {
+    dorsal: 1,
+    nome: "José Antonio Chaves Mosquera",
+    alcume: "Chaves",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 2,
+    nome: "Marcelino Álvarez Gonzalez",
+    alcume: "Nino",
+    foto: "../images/estrada.jpg",
+    rol: "jugador",
+  },
+  {
+    dorsal: 3,
+    nome: "Alfonso Rodríguez Hermo",
+    alcume: "Black",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 4,
+    nome: "Santiago Rubén Dieste Sánchez",
+    alcume: "",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 5,
+    nome: "Mateo Boullón Fandiño",
+    alcume: "",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 6,
+    nome: "Francisco Javier Delgado Mariño",
+    alcume: "",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 7,
+    nome: "Samuel López Fraga",
+    alcume: "Piro",
+    foto: "",
+    rol: "jugador",
+  },
+  { dorsal: 8, nome: "Iker Calvo Gómez", alcume: "", foto: "", rol: "jugador" },
+  {
+    dorsal: 9,
+    nome: "Manuel Cespón Fungueiriño",
+    alcume: "",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 10,
+    nome: "Alejandro Sánchez Collazo",
+    alcume: "Kabuxa",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 11,
+    nome: "David Chaves Rodríguez",
+    alcume: "Junior",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 12,
+    nome: "Alejandro Fabeiro Vázquez",
+    alcume: "",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 13,
+    nome: "Juan Carlos García Boo",
+    alcume: "",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 14,
+    nome: "Julio Aller Acuña",
+    alcume: "",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 15,
+    nome: "Abel Romero Vidal",
+    alcume: "Kanario",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 16,
+    nome: "Manuel Núñez Nieto",
+    alcume: "",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 17,
+    nome: "Marcos Chaves Rodríguez",
+    alcume: "",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 18,
+    nome: "José Ramón Agrelo Romero",
+    alcume: "Herbas",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 19,
+    nome: "Rubén Sánchez Collazo",
+    alcume: "Rubas",
+    foto: "",
+    rol: "jugador",
+  },
+  {
+    dorsal: 20,
+    nome: "Josué Mariño Places",
+    alcume: "Jossu",
+    foto: "",
+    rol: "jugador",
+  },
+];
 ---
 
-<Layout title="Os nosos">
-  <h1>Hola</h1>
-  <h2>{pokemonData.name}</h2>
-  <img
-    src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonData.id}.png`
-    alt="pokemon"
-    loading="eager"
-  />
-  <h2>{pokemonData.name}</h2>
-  <img
-    src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonData.id+1}.png`
-    alt="pokemon"
-    loading="eager"
-  />
-  <h2>{pokemonData.name}</h2>
-  <img
-    src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonData.id+2}.png`
-    alt="pokemon"
-    loading="eager"
-  />
-  <h2>{pokemonData.name}</h2>
-  <img
-    src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonData.id+3}.png`
-    alt="pokemon"
-    loading="eager"
-  />
-  <h2>{pokemonData.name}</h2>
-  <img
-    src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonData.id+4}.png`
-    alt="pokemon"
-    loading="eager"
-  />
-  <h2>{pokemonData.name}</h2>
-  <img
-    src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonData.id+5}.png`
-    alt="pokemon"
-    loading="eager"
-  />
-</Layout>
+<h1 id="xogadores" class="text-2xl font-bold mb-4">Xogadores</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  {
+    players.map((player) => (
+      <PlayerCard
+        dorsal={player.dorsal}
+        nome={player.nome}
+        alcume={player.alcume}
+        foto={player.foto}
+        rol={player.rol}
+      />
+    ))
+  }
+</div>

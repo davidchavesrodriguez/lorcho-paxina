@@ -1,8 +1,21 @@
 ---
+import Navigation from "@/components/Navigation.astro";
 ---
 
-<header class="bg-secondary" transition:animate="none">
-  <img src="../images/escudoOptimizado.png" alt="Escudo GB Lorchos" class="w-1/12 animate-zoom-in" loading="eager" />
-  <h1>Forsa, Rabia, Lorchos!</h1>
-  <h5>Fogar do Galicia Bealo Lorchos</h5>
+<header
+  class="bg-secondary flex flex-row sticky top-0 w-full z-50 border-b border-black"
+>
+  <div class="border-2 border-black w-max flex items-center">
+    <img
+      src="../images/escudoOptimizado.png"
+      alt="Escudo GB Lorchos"
+      class="w-1/12 animate-zoom-in"
+      loading="eager"
+    />
+    <div>
+      <h1>Forsa, Rabia, Lorchos!</h1>
+      <h5>Fogar do Galicia Bealo Lorchos</h5>
+    </div>
+  </div>
+  <Navigation />
 </header>

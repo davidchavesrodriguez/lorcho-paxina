@@ -1,33 +1,63 @@
 ---
-import Layout from "@/layouts/Layout.astro";
+
 ---
 
-<Layout title="Somos Lorchos!">
-  <!-- First Section -->
-  <section class="bg-gray-300 flex flex-row items-center">
-    <h1 class="underline font-bold">Fútbol gaélico no Barbanza</h1>
-    <p>
-      O Galicia Bealo Lorchos é o primeiro e único equipo de fútbol gaélico na
-      comarca do Barbanza.
-    </p>
-  </section>
-
-  <!-- Second Section -->
-  <section class="bg-background flex flex-row items-center">
-    <img
-      src="../images/inicioLorchos.jpeg"
-      alt="Bandeira Lorcheira"
-      class="max-w-md p-7"
-    />
-    <img
-      src="../icons/frechaDereita.svg"
-      alt="Flecha hacia a dereita"
-      class="frechaDereita w-12 hover:scale-125 bg-white hover:bg-blue-200 rounded-full transition-transform -ml-12"
-    />
-    <p>
-      As andaduras comezaron en agosto de 2023. Éramos poucos e non coñeciamos
-      case nada do deporte
-    </p>
-    <h1 class="underline font-bold">Somos lorchos!</h1>
-  </section>
-</Layout>
+<section class="bg-background h-screen" id="quenSomos">
+  <div class="flex flex-row h-full">
+    <div class="relative group flex-1">
+      <img
+        src="../images/inicioLorchos.jpeg"
+        alt="Primeiros Lorchos nunha foto"
+        class="w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-20 group-hover:opacity-100"
+        id="inicio"
+      />
+      <div
+        class="absolute inset-0 bg-gray-700 opacity-70 rounded transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+      >
+      </div>
+      <div
+        class="absolute inset-0 flex items-center justify-center pointer-events-none"
+      >
+        <h2 class="text-white text-3xl font-bold">
+          As andaduras comezaron en agosto de 2023
+        </h2>
+      </div>
+    </div>
+    <div class="relative group flex-1">
+      <img
+        src="../images/estrada.jpg"
+        alt="Primeiro torneo dos Lorchos"
+        class="w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-20 group-hover:opacity-100"
+        id="estrada"
+      />
+      <div
+        class="absolute inset-0 bg-gray-700 opacity-70 rounded transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+      >
+      </div>
+      <div
+        class="absolute inset-0 flex items-center justify-center pointer-events-none"
+      >
+        <h2 class="text-white text-3xl font-bold">Éramos poucos...</h2>
+      </div>
+    </div>
+    <div class="relative group flex-1">
+      <img
+        src="../images/entrenoLorcheiro.jpg"
+        alt="Un dos primeiros entrenamentos dos Lorchos"
+        class="w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-20 group-hover:opacity-100"
+        id="entrenamento"
+      />
+      <div
+        class="absolute inset-0 bg-gray-700 opacity-70 rounded transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+      >
+      </div>
+      <div
+        class="absolute inset-0 flex items-center justify-center pointer-events-none"
+      >
+        <h2 class="text-white text-3xl font-bold">
+          ...e non coñeciamos case nada do deporte
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
