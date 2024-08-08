@@ -22,15 +22,14 @@ import { ViewTransitions } from "astro:transitions";
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body>
+  <body class="bg-blue-200 w-11/12 lg:w-10/12 xl:w-9/12 mx-auto">
     <Header />
-    <div class="w-3/4 mx-auto">
+    <div>
       <slot />
     </div>
     <Footer />
     <style is:global>
       html {
-        background: #94b0f8;
         font-family: "Poppins", sans-serif;
         /* color-scheme: dark light; */
       }

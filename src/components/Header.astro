@@ -3,19 +3,34 @@ import Navigation from "@/components/Navigation.astro";
 ---
 
 <header
-  class="bg-secondary flex flex-row sticky top-0 w-full z-50 border-b border-black"
+  class="bg-blue-400 flex flex-row sticky top-0 z-50 border-b border-black w-full"
 >
-  <div class="border-2 border-black w-max flex items-center">
+  <!-- Pantallas grandes -->
+  <div class="hidden sm:flex w-5/12 flex-none items-center justify-center">
     <img
       src="../images/escudoOptimizado.png"
       alt="Escudo GB Lorchos"
-      class="w-1/12 animate-zoom-in"
+      class="w-5/12"
       loading="eager"
     />
-    <div>
-      <h1>Forsa, Rabia, Lorchos!</h1>
-      <h5>Fogar do Galicia Bealo Lorchos</h5>
+    <div class="mx-auto text-center">
+      <h1 class="text-white text-lg lg:text-2xl font-bold">
+        Fogar do Galicia Bealo Lorchos
+      </h1>
     </div>
   </div>
-  <Navigation />
+  <div class="hidden sm:flex flex-1">
+    <Navigation />
+  </div>
+
+  <!-- Pantallas pequenas -->
+  <div class="flex sm:hidden flex-1 items-center justify-center">
+    <img
+      src="../images/escudoOptimizado.png"
+      alt="Escudo GB Lorchos"
+      class="w-2/12"
+      loading="eager"
+    />
+    <Navigation />
+  </div>
 </header>

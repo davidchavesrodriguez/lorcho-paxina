@@ -1,67 +1,12 @@
 ---
-const { icon, altText } = Astro.props;
+const { buttonName } = Astro.props;
 ---
 
-<button class="button-57 w-1/4" role="button">
-  <img class="icon" src={icon} />
-  <span class="alt-text">{altText}</span>
+<button
+  class="relative inline-block text-white bg-blue-400 hover:bg-gray-900 px-4 py-3 text-sm leading-5 cursor-pointer transition-colors duration-500 ease-in-out font-semibold lg:text-xl"
+  role="button"
+>
+  <span>{buttonName}</span>
 </button>
 
-<style>
-  /* https://getcssscan.com/css-buttons-examples */
-  .button-57 {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #18181a;
-    color: #18181a;
-    display: inline-block;
-    font-size: 15px;
-    line-height: 15px;
-    padding: 18px 18px 17px;
-    text-decoration: none;
-    cursor: pointer;
-    background: #fff;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    transition:
-      background-color 500ms cubic-bezier(0.48, 0, 0.12, 1),
-      color 500ms cubic-bezier(0.48, 0, 0.12, 1),
-      border-color 500ms cubic-bezier(0.48, 0, 0.12, 1); /* Transición suave para fondo, color y borde */
-  }
-
-  .button-57 .icon {
-    position: relative;
-    transition: opacity 500ms cubic-bezier(0.48, 0, 0.12, 1); /* Asegura que la transición de opacidad sea fluida */
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .button-57 .alt-text {
-    color: white;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 500ms cubic-bezier(0.48, 0, 0.12, 1); /* Transición suave para opacidad */
-    z-index: 100;
-  }
-
-  .button-57:hover .icon {
-    opacity: 0;
-  }
-
-  .button-57:hover .alt-text {
-    opacity: 1;
-  }
-
-  .button-57:hover {
-    background: #18181a; /* Color de fondo al hacer hover */
-    color: #fff; /* Color del texto al hacer hover */
-    border-color: #18181a; /* Color del borde al hacer hover */
-  }
-</style>
+<!-- https://getcssscan.com/css-buttons-examples -->
